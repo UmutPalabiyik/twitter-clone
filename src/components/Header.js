@@ -1,16 +1,16 @@
 import "./Header.scss";
 import { FaTwitter } from "react-icons/fa";
 import { RiHome7Fill } from "react-icons/ri";
+import { RiFileListLine } from "react-icons/ri";
 import { AiOutlineNumber } from "react-icons/ai";
 import { IoMdNotificationsOutline } from "react-icons/io";
-import { RiFileListLine } from "react-icons/ri";
+import { HiOutlineDotsHorizontal } from "react-icons/hi";
 import { HiOutlineUser } from "react-icons/hi";
 import { BiEnvelope } from "react-icons/bi";
 import { CgMoreO } from "react-icons/cg";
 import { FiBookmark } from "react-icons/fi";
 
 const Banner = () => {
-
   return (
     <div className="banner">
       <div className="banner__wrapper">
@@ -93,7 +93,27 @@ const Banner = () => {
         </div>
 
         <div className="navbar__profile">
-            <div className="nav__profile-left"></div>
+          <div className="navbar__profile-wrapper">
+            <div className="navbar__profile-left">
+              <img
+                className="navbar__profile-pic"
+                src="../../assets/profile-pic.jpg"
+                alt="pic"
+              />
+
+              <div className="navbar__profile-username">
+                <span className="navbar__profile-username-l1">HeyMrHope</span>
+                <span className="navbar__profile-username-l2">@UmmutPal</span>
+              </div>
+            </div>
+            <div className="navbar__profile-right">
+              <HiOutlineDotsHorizontal
+                className="nav__profile-dots"
+                color={"#fff"}
+                size={20}
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>
