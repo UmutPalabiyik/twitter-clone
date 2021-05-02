@@ -2,16 +2,19 @@
   padding: 0.5rem 1.5rem;
   min-height: 10vh;
   border-bottom: 1px solid rgb(56, 68, 77);
+
   &__container {
     display: flex;
     height: 100%;
 
     .profile-tweet__picture {
       flex-basis: 10.5%;
+      
 
       img {
         height: 48px;
         width: 48px;
+        margin-top: 8px;
         border-radius: 50%;
       }
     }
@@ -20,23 +23,21 @@
       flex: 1;
       display: flex;
       flex-direction: column;
-      align-items: space-between;
-      justify-content: space-between;
+      justify-content: center;
 
-      .profile-tweet__tweet{
-          &-input{
-            background: transparent;
-            color: #fff;
-            font-size: 20px;
-            outline: none;
-            border: none;
-            padding: .5rem 0;
+      .profile-tweet__tweet {
+        &-input {
+          background: transparent;
+          color: #fff;
+          font-size: 20px;
+          outline: none;
+          border: none;
+          padding: 0.5rem 0;
 
-
-            &::placeholder{
-                color: #788895;
-            }
+          &::placeholder {
+            color: #788895;
           }
+        }
       }
 
       .profile-tweet__tools {
@@ -46,9 +47,10 @@
         &-list {
           display: flex;
           padding: 0;
+          margin-bottom: 0;
 
           &-item {
-            margin-right: 0.5rem;
+            margin-right: 0.7rem;
             list-style: none;
 
             a {
@@ -61,12 +63,19 @@
           display: inline-block;
           .profile-tweet__mini-tweet-btn {
             background-color: rgb(29, 161, 242);
+            opacity: .5;
             color: #fff;
             font-size: 15px;
             font-weight: 700;
             text-decoration: none;
-            padding: 0.6rem 2rem;
+            padding: 0.6rem 1.5rem;
+            border: 0;
             border-radius: 4rem;
+            cursor: pointer;
+          }
+
+          .profile-tweet__mini-tweet-btn--opacity{
+            opacity: 1 !important;
           }
         }
       }

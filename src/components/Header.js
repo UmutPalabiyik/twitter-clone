@@ -97,7 +97,7 @@ const Banner = () => {
             <div className="navbar__profile-left">
               <img
                 className="navbar__profile-pic"
-                src="../../assets/profile-pic.jpg"
+                src="../../assets/pp2.png"
                 alt="pic"
               />
 

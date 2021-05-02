@@ -11,12 +11,14 @@
 
 
     .main__homepage {
-      height: 6vh;
+      min-height: 4.5vh;
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 0 1rem;
       border-bottom: 1px solid rgb(56, 68, 77);
+      flex-shrink: 0;
+      
 
       .main__homepage-text {
         font-size: 20px;
