@@ -18,9 +18,7 @@ const ProfileTweet = () => {
     }
   };
 
-  const say = () => {
-    console.log("asdasd");
-  };
+
   return (
     <div className="profile-tweet">
       <div className="profile-tweet__container">
@@ -71,7 +69,7 @@ const ProfileTweet = () => {
                 className={`profile-tweet__mini-tweet-btn ${
                   emptyInput ? "profile-tweet__mini-tweet-btn--opacity" : ""
                 }`}
-                onClick={say}
+                
                 
                 disabled={emptyInput ? false : true} /* if false you can click button else you cant */
               >
