@@ -1,15 +1,16 @@
 .profile-tweet {
-  padding: 0.5rem 1.5rem;
+  padding: 0.3rem .7rem;
   min-height: 10vh;
   border-bottom: 1px solid rgb(56, 68, 77);
+
 
   &__container {
     display: flex;
     height: 100%;
 
+
     .profile-tweet__picture {
       flex-basis: 10.5%;
-      
 
       img {
         height: 48px;
@@ -44,6 +45,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        margin-top: 0.5rem;
         &-list {
           display: flex;
           padding: 0;
@@ -63,19 +65,19 @@
           display: inline-block;
           .profile-tweet__mini-tweet-btn {
             background-color: rgb(29, 161, 242);
-            opacity: .5;
+            opacity: 0.5;
             color: #fff;
             font-size: 15px;
             font-weight: 700;
             text-decoration: none;
-            padding: 0.6rem 1.5rem;
+            padding: 0.7rem 1.2rem;
             border: 0;
             border-radius: 4rem;
-            cursor: pointer;
           }
 
-          .profile-tweet__mini-tweet-btn--opacity{
+          .profile-tweet__mini-tweet-btn--opacity {
             opacity: 1 !important;
+            cursor: pointer;
           }
         }
       }

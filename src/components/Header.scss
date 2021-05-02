@@ -17,6 +17,7 @@
     .banner__navigation {
       .banner__logo {
         margin-left: 3rem;
+        cursor: pointer;
       }
       .navbar__items {
         list-style: none;
@@ -25,7 +26,7 @@
           padding: 0.8rem 0.6rem;
           margin-bottom: 2px;
 
-          &:hover {
+          &:hover:not(.navbar__button) {
             background-color: #162d40;
             border-top-right-radius: 35px;
             border-top-left-radius: 35px;
@@ -80,14 +81,19 @@
 
         .navbar__button {
           margin-top: 2rem;
+          transition: all .4s;
+
+          &:hover a{
+            background-color: rgb(25, 147, 218);
+          }
         }
       }
     }
 
     .navbar__profile {
-      padding: .7rem 1.6rem;
-      margin-bottom: .5rem;
-      transition: all .2s;
+      padding: 0.7rem 1.6rem;
+      margin-bottom: 0.5rem;
+      transition: all 0.2s;
       &-wrapper {
         display: flex;
         justify-content: space-between;
