@@ -1,13 +1,12 @@
 .profile-tweet {
-  padding: 0.3rem .7rem;
+  padding: 0.3rem 0.7rem;
   min-height: 10vh;
   border-bottom: 1px solid rgb(56, 68, 77);
-
+  flex-shrink: 0;
 
   &__container {
     display: flex;
     height: 100%;
-
 
     .profile-tweet__picture {
       flex-basis: 10.5%;

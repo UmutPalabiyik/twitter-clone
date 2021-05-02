@@ -11,84 +11,67 @@ import { CgMoreO } from "react-icons/cg";
 import { FiBookmark } from "react-icons/fi";
 
 const Banner = () => {
+  const listItems = [
+    {
+      icon: <RiHome7Fill className="navbar__icon-comp" size={30} />,
+      name: "Anasayfa",
+      path: "/",
+    },
+    {
+      icon: <AiOutlineNumber className="navbar__icon-comp" size={30} />,
+      name: "Keşfet",
+      path: "/",
+    },
+    {
+      icon: (
+        <IoMdNotificationsOutline className="navbar__icon-comp" size={30} />
+      ),
+      name: "Bildirimler",
+      path: "/",
+    },
+    {
+      icon: <BiEnvelope className="navbar__icon-comp" size={30} />,
+      name: "Mesajlar",
+      path: "/",
+    },
+    {
+      icon: <FiBookmark className="navbar__icon-comp" size={30} />,
+      name: "Yer İşaretleri",
+      path: "/",
+    },
+    {
+      icon: <RiFileListLine className="navbar__icon-comp" size={30} />,
+      name: "Listeler",
+      path: "/",
+    },
+    {
+      icon: <HiOutlineUser className="navbar__icon-comp" size={30} />,
+      name: "Profil",
+      path: "/",
+    },
+    {
+      icon: <CgMoreO className="navbar__icon-comp" size={30} />,
+      name: "Daha Fazla",
+      path: "/",
+    },
+  ];
   return (
     <div className="banner">
       <div className="banner__wrapper">
         <div className="banner__navigation">
           <FaTwitter className="banner__logo" size={30} color="#fff" />
+          
           <ul className="navbar__items">
-            <li className="navbar__item">
-              <a href="/" className="navbar__item-link">
-                <div className="navbar__icon">
-                  <RiHome7Fill className="navbar__icon-comp" size={30} />
-                </div>
-                <div className="navbar__span">Anasayfa</div>
-              </a>
-            </li>
-            <li className="navbar__item">
-              <a href="/" className="navbar__item-link">
-                <div className="navbar__icon">
-                  <AiOutlineNumber className="navbar__icon-comp" size={30} />
-                </div>
-                <div className="navbar__span">Keşfet</div>
-              </a>
-            </li>
-            <li className="navbar__item">
-              <a href="/" className="navbar__item-link">
-                <div className="navbar__icon">
-                  <IoMdNotificationsOutline
-                    className="navbar__icon-comp"
-                    size={30}
-                  />
-                </div>
-                <div className="navbar__span">Bildirimler</div>
-              </a>
-            </li>
-            <li className="navbar__item">
-              <a href="/" className="navbar__item-link">
-                <div className="navbar__icon">
-                  <BiEnvelope className="navbar__icon-comp" size={30} />
-                </div>
-                <div className="navbar__span">Mesajlar</div>
-              </a>
-            </li>
-            <li className="navbar__item">
-              <a href="/" className="navbar__item-link">
-                <div className="navbar__icon">
-                  <FiBookmark className="navbar__icon-comp" size={30} />
-                </div>
-                <div className="navbar__span">Yer İşaretleri</div>
-              </a>
-            </li>
-            <li className="navbar__item">
-              <a href="/" className="navbar__item-link">
-                <div className="navbar__icon">
-                  <RiFileListLine className="navbar__icon-comp" size={30} />
-                </div>
-                <div className="navbar__span">Listeler</div>
-              </a>
-            </li>
-            <li className="navbar__item">
-              <a href="/" className="navbar__item-link">
-                <div className="navbar__icon">
-                  <HiOutlineUser className="navbar__icon-comp" size={30} />
-                </div>
-                <div className="navbar__span">Profil</div>
-              </a>
-            </li>
-            <li className="navbar__item">
-              <a href="/" className="navbar__item-link">
-                <div className="navbar__icon">
-                  <CgMoreO className="navbar__icon-comp" size={30} />
-                </div>
-                <div className="navbar__span">Daha Fazla</div>
-              </a>
-            </li>
-            <li className="navbar__item navbar__button">
-              <a href="/" className="navbar__tweet-button">
-                Tweetle
-              </a>
-            </li>
+            {listItems.map((item) => {
+              return (
+                <li className="navbar__item">
+                  <a href={item.path} className="navbar__item-link">
+                    <div className="navbar__icon">{item.icon}</div>
+                    <div className="navbar__span">{item.name}</div>
+                  </a>
+                </li>
+              );
+            })}
           </ul>
         </div>
 
@@ -106,6 +89,7 @@ const Banner = () => {
                 <span className="navbar__profile-username-l2">@UmmutPal</span>
               </div>
             </div>
+
             <div className="navbar__profile-right">
               <HiOutlineDotsHorizontal
                 className="nav__profile-dots"
