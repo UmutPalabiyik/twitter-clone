@@ -1,7 +1,7 @@
 import "./Main.scss";
 import { WiStars } from "react-icons/wi";
-import ProfileTweet from "./ProfileTweet";
-import TweetFlox from "./TweetFlow";
+
+import TweetFlow from "./TweetFlow";
 
 const Main = () => {
   return (
@@ -13,8 +13,7 @@ const Main = () => {
             <WiStars size={35} color={"#1DA1F2"} />
           </div>
         </div>
-        <ProfileTweet />
-        <TweetFlox />
+        <TweetFlow />
       </div>
     </div>
   );

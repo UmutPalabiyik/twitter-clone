@@ -1,5 +1,13 @@
+/* Hooks */
 import { useState } from "react";
+
+/* Database */
+import db from "../firebase";
+import firebase from "firebase";
+
 import "./ProfileTweet.scss";
+
+/* icons */
 import { AiOutlinePicture } from "react-icons/ai";
 import { AiOutlineFileGif } from "react-icons/ai";
 import { AiOutlineSchedule } from "react-icons/ai";
@@ -8,12 +16,29 @@ import { FiSmile } from "react-icons/fi";
 
 const ProfileTweet = () => {
   const [emptyInput, setEmptyInput] = useState(false);
+  const [tweet, setTweet] = useState("");
 
   /* if input is not empty the tweet button can be clickable and the tweet button has an opacity of 1  */
   const checkInput = (e) => {
     if (e.target.value.length > 0) {
       setEmptyInput(true);
+      setTweet(e.target.value);
     } else {
+      setEmptyInput(false);
+      setTweet("");
+    }
+  };
+
+  const sendTweet = () => {
+    if (emptyInput) {
+      db.collection("tweets").add({
+        displayName: "HeyMrHope",
+        userName: "@UmmutPal",
+        tweet: tweet,
+        timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+      });
+
+      setTweet("");
       setEmptyInput(false);
     }
   };
@@ -49,19 +74,19 @@ const ProfileTweet = () => {
         </div>
         <div className="profile-tweet__box">
           <div className="profile-tweet__tweet">
-            <input
-              className="profile-tweet__tweet-input"
+            <textarea
+              className="profile-tweet__tweet-area"
               onChange={checkInput}
               type="text"
               placeholder="Neler Oluyor?"
+              value={tweet}
             />
           </div>
           <div className="profile-tweet__tools">
             <ul className="profile-tweet__tools-list">
-
-              {listItem.map((item) => {
+              {listItem.map((item, key) => {
                 return (
-                  <li className="profile-tweet__tools-list-item">
+                  <li className="profile-tweet__tools-list-item" key={key}>
                     <a
                       href={item.path}
                       className="profile-tweet__list-item-link"
@@ -71,7 +96,6 @@ const ProfileTweet = () => {
                   </li>
                 );
               })}
-              
             </ul>
 
             <div className="profile-tweet__mini-tweet-btn-container">
@@ -83,6 +107,7 @@ const ProfileTweet = () => {
                 disabled={
                   emptyInput ? false : true
                 } /* if false you can click button else you cant */
+                onClick={sendTweet}
               >
                 Tweetle
               </button>

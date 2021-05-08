@@ -1,7 +1,7 @@
 import "./Header.scss";
 import { FaTwitter } from "react-icons/fa";
 import { RiHome7Fill } from "react-icons/ri";
-import { RiFileListLine } from "react-icons/ri";
+import { RiFileList2Line } from "react-icons/ri";
 import { AiOutlineNumber } from "react-icons/ai";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
@@ -15,46 +15,47 @@ const Banner = () => {
     {
       icon: <RiHome7Fill className="navbar__icon-comp" size={30} />,
       name: "Anasayfa",
-      path: "/",
+      path: "/home",
     },
     {
       icon: <AiOutlineNumber className="navbar__icon-comp" size={30} />,
       name: "Keşfet",
-      path: "/",
+      path: "/explore",
     },
     {
       icon: (
         <IoMdNotificationsOutline className="navbar__icon-comp" size={30} />
       ),
       name: "Bildirimler",
-      path: "/",
+      path: "/notifications",
     },
     {
       icon: <BiEnvelope className="navbar__icon-comp" size={30} />,
       name: "Mesajlar",
-      path: "/",
+      path: "/messages",
     },
     {
       icon: <FiBookmark className="navbar__icon-comp" size={30} />,
       name: "Yer İşaretleri",
-      path: "/",
+      path: "/marks",
     },
     {
-      icon: <RiFileListLine className="navbar__icon-comp" size={30} />,
+      icon: <RiFileList2Line className="navbar__icon-comp" size={30} />,
       name: "Listeler",
-      path: "/",
+      path: "/lists",
     },
     {
       icon: <HiOutlineUser className="navbar__icon-comp" size={30} />,
       name: "Profil",
-      path: "/",
+      path: "/profile",
     },
     {
       icon: <CgMoreO className="navbar__icon-comp" size={30} />,
       name: "Daha Fazla",
-      path: "/",
+      path: "/more",
     },
   ];
+
   return (
     <div className="banner">
       <div className="banner__wrapper">
@@ -62,9 +63,9 @@ const Banner = () => {
           <FaTwitter className="banner__logo" size={30} color="#fff" />
           
           <ul className="navbar__items">
-            {listItems.map((item) => {
+            {listItems.map((item, key) => {
               return (
-                <li className="navbar__item">
+                <li className="navbar__item" key={key}>
                   <a href={item.path} className="navbar__item-link">
                     <div className="navbar__icon">{item.icon}</div>
                     <div className="navbar__span">{item.name}</div>
