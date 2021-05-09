@@ -6,22 +6,22 @@ import { useState } from "react";
 const WidgetsTrendings = () => {
   const [limitTrendings, setLimitTrendings] = useState({
     limit: 5,
-    text: "Daha Fazla Göster",
+    text: "Daha fazla göster",
+    situation: false,
   });
-
-  const [limitSituation, setLimitSituation] = useState(false);
 
   /* it changes trending section topic limit (between 10 and 5) and text (between "Daha Fazla Göster" and "Daha Az Göster") */
   const changeLimit = () => {
-    if (limitSituation) {
-      setLimitTrendings({ limit: 5, text: "Daha Fazla Göster" });
-      setLimitSituation(false);
+    if (limitTrendings.situation) {
+      setLimitTrendings({
+        limit: 5,
+        text: "Daha fazla göster",
+        situation: false,
+      });
     } else {
-      setLimitTrendings({ limit: 10, text: "Daha az Göster" });
-      setLimitSituation(true);
+      setLimitTrendings({ limit: 10, text: "Daha az göster", situation: true });
     }
   };
-  
 
   const trendingTopics = [
     {
@@ -71,7 +71,7 @@ const WidgetsTrendings = () => {
     },
     {
       location: "Türkiye",
-      hashtag: "maldivler",
+      hashtag: "Bahamalar",
       tweetCount: 12.953,
     },
   ];

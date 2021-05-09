@@ -1,0 +1,35 @@
+.widgets-suggestions{
+    margin-top: 1rem;
+
+    &__heading{
+        background-color: rgb(25, 39, 52);
+        border-bottom: 1px solid rgb(56, 68, 77);
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+        padding: 10px 16px;
+        &-text{
+            color: #fff;
+            font-size: 20px;
+            font-weight: 800;
+            color: #fff;
+        }
+    }
+
+    &__show-more {
+        padding: 1.2rem 0;
+        padding-left: 1rem;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        background-color: rgb(25, 39, 52);
+    
+        &:hover {
+          background-color: #202e3a;
+          cursor: pointer;
+        }
+        &-span {
+          color: #1da1f2;
+          font-size: 15px;
+          font-weight: 400;
+        }
+      }
+}
