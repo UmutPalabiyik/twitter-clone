@@ -5,7 +5,7 @@ import { FaRegComment } from "react-icons/fa";
 import { AiOutlineRetweet } from "react-icons/ai";
 import { HiOutlineHeart } from "react-icons/hi";
 import { RiUpload2Line } from "react-icons/ri";
-import { FiBarChart2 } from "react-icons/fi";
+
 
 import "./Tweet.scss";
 
@@ -46,19 +46,16 @@ const Tweet = (props) => {
           <div className="tweet__icons">
             <ul className="tweet__icons-list">
               <li className="tweet__icons-list-item">
-                <FaRegComment color={"#88A3A6"}  size={19}/>
+                <FaRegComment className="tweet__icons-list-item-icon" color={"#88A3A6"}  size={19}/>
               </li>
               <li className="tweet__icons-list-item">
-                <AiOutlineRetweet color={"#88A3A6"} size={19}/>
+                <AiOutlineRetweet className="tweet__icons-list-item-icon" color={"#88A3A6"} size={20}/>
               </li>
               <li className="tweet__icons-list-item">
-                <HiOutlineHeart color={"#88A3A6"} size={19}/>
+                <HiOutlineHeart className="tweet__icons-list-item-icon" color={"#88A3A6"} size={20}/>
               </li>
               <li className="tweet__icons-list-item">
-                <RiUpload2Line color={"#88A3A6"} size={19}/>
-              </li>
-              <li className="tweet__icons-list-item">
-                <FiBarChart2 color={"#88A3A6"} size={19}/>
+                <RiUpload2Line className="tweet__icons-list-item-icon" color={"#88A3A6"} size={19}/>
               </li>
             </ul>
           </div>

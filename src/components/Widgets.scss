@@ -1,0 +1,12 @@
+.widgets {
+  display: flex;
+  flex: 1;
+
+  &__wrapper {
+    flex-basis: 38%;
+    margin-top: 0.2rem;
+    margin-left: 2.2rem;
+  }
+
+
+} 

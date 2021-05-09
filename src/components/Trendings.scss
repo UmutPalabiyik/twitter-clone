@@ -1,0 +1,43 @@
+.trending {
+  background-color: rgb(25, 39, 52);
+  border-bottom: 1px solid rgb(56, 68, 77);
+  padding: 0 16px;
+
+  &:hover{
+      background-color: #202E3A;
+      cursor: pointer;
+  }
+
+  &__body {
+    padding: .5rem 0;
+
+    &-location {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 4px;
+
+      &-place {
+        color: #8899a6;
+        font-size: 13px;
+        font-weight: 400;
+        margin: 0;
+    
+      }
+    }
+
+    &-topic {
+      font-size: 15px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+
+    &-tweet-count {
+      font-size: 13px;
+      font-weight: 400;
+      color: #8899a6;
+      margin-bottom: 4px;
+    }
+  }
+}

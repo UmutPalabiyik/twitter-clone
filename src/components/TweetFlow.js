@@ -20,14 +20,17 @@ const TweetFlow = () => {
     <>
       <div className="tweet-flow">
         <ProfileTweet />
-        <div style={{height: ".8rem", backgroundColor: "#192734", borderBottom:"1px solid rgb(56, 68, 77)"}}>
-
-</div>
+        <div
+          style={{
+            height: ".8rem",
+            backgroundColor: "#192734",
+            borderBottom: "1px solid rgb(56, 68, 77)",
+          }}
+        ></div>
         {tweets.map((tweet, key) => {
           return <Tweet tweet={tweet} key={key} />;
         })}
       </div>
-
     </>
   );
 };
