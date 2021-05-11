@@ -13,6 +13,13 @@ import { AiOutlineFileGif } from "react-icons/ai";
 import { AiOutlineSchedule } from "react-icons/ai";
 import { BsBarChart } from "react-icons/bs";
 import { FiSmile } from "react-icons/fi";
+import {
+  MediaIcon,
+  GifIcon,
+  SurveyIcon,
+  EmojiIcon,
+  PlanIcon,
+} from "../icons/ProfileTweetIcons";
 
 const ProfileTweet = () => {
   const [emptyInput, setEmptyInput] = useState(false);
@@ -46,23 +53,23 @@ const ProfileTweet = () => {
   const listItem = [
     {
       path: "/",
-      icon: <AiOutlinePicture color={"#1da1f2"} size={23} />,
+      icon: <MediaIcon />,
     },
     {
       path: "/",
-      icon: <AiOutlineFileGif color={"#1da1f2"} size={23} />,
+      icon: <GifIcon />,
     },
     {
       path: "/",
-      icon: <BsBarChart color={"#1da1f2"} size={23} />,
+      icon: <SurveyIcon />,
     },
     {
       path: "/",
-      icon: <FiSmile color={"#1da1f2"} size={23} />,
+      icon: <EmojiIcon />,
     },
     {
       path: "/",
-      icon: <AiOutlineSchedule color={"#1da1f2"} size={23} />,
+      icon: <PlanIcon />,
     },
   ];
 
@@ -87,12 +94,7 @@ const ProfileTweet = () => {
               {listItem.map((item, key) => {
                 return (
                   <li className="profile-tweet__tools-list-item" key={key}>
-                    <a
-                      href={item.path}
-                      className="profile-tweet__list-item-link"
-                    >
-                      {item.icon}
-                    </a>
+                    {item.icon}
                   </li>
                 );
               })}

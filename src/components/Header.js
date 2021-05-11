@@ -61,10 +61,10 @@ const Banner = () => {
   ];
 
   return (
-    <div className="banner">
-      <div className="banner__wrapper">
-        <div className="banner__navigation">
-          <FaTwitter className="banner__logo" size={30} color="#fff" />
+    <div className="navbar">
+      <div className="navbar__wrapper">
+        <div className="navbar__navigation">
+          <FaTwitter className="navbar__logo" size={30} color="#fff" />
 
           <ul className="navbar__items">
             {listItems.map(({icon, name, path}, key) => {
@@ -78,7 +78,15 @@ const Banner = () => {
               );
             })}
           </ul>
+
+          <div className="navbar__tweet-button">
+            <span className="navbar__tweet-button-inner">
+              Tweetle
+            </span>
+          </div>
         </div>
+
+        
 
         <div className="navbar__profile">
           <div className="navbar__profile-wrapper">

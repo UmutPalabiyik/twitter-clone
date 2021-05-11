@@ -38,12 +38,11 @@
           outline: none;
           border: none;
           padding-top: 1rem;
+          padding-left: .5rem;
           resize: none;
           overflow-y: hidden;
+         
 
-          &::placeholder {
-            color: #788895;
-          }
         }
       }
 
@@ -55,14 +54,27 @@
         &-list {
           display: flex;
           padding: 0;
-          margin-bottom: 0;
+          margin: 0;
+          
 
           &-item {
-            margin-right: 0.7rem;
+            
             list-style: none;
+            height: 38px;
+            width: 38px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-            a {
-              text-decoration: none;
+            &:hover {
+              background-color: rgba(29, 161, 242, 0.1);
+              border-radius: 50%;
+              cursor: pointer;
+            }
+
+            svg {
+              height: 22.5px;
+              width: 22.5px;
             }
           }
         }
@@ -76,7 +88,7 @@
             font-size: 15px;
             font-weight: 700;
             text-decoration: none;
-            padding: 0.7rem 1.2rem;
+            padding: 0.7rem 1.1rem;
             border: 0;
             border-radius: 4rem;
           }

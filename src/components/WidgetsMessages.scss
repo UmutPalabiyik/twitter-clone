@@ -18,6 +18,7 @@
     color: #fff;
     font-size: 20px;
     font-weight: 800;
+    align-self: center;
     &:hover {
       cursor: pointer;
     }
@@ -26,11 +27,12 @@
   &__icons {
     display: flex;
 
-    .widgets-message__message-icon {
-      height: 22.5px;
-      width: 22.5px;
-      margin-right: 16px;
-      padding: 6px;
+    .widgets-message__icons-inner {
+      height: 38px;
+      width: 38px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
       &:hover {
         border-radius: 50%;
@@ -38,17 +40,16 @@
         cursor: pointer;
       }
     }
+
+    .widgets-message__message-icon {
+      height: 22.5px;
+      width: 22.5px;
+    }
     .widgets-message__open-icon {
       height: 22.5px;
       width: 22.5px;
-      padding: 10px;
-      padding: 6px;
 
-      &:hover {
-        border-radius: 50%;
-        background-color: rgba(29, 161, 242, 0.1);
-        cursor: pointer;
-      }
+
     }
   }
 }
