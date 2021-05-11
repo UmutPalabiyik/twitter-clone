@@ -1,0 +1,31 @@
+.widgets-nav{
+    padding: 0 16px;
+    &__list{
+        
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        padding-inline-start:0;
+        line-height: 18px;
+        &-item{
+            flex-basis: 32%;
+            &-link{
+                color: #8899a6;
+                font-size: 13px;
+                font-weight: 400;
+                text-decoration: none;
+                white-space: nowrap;
+
+                &:hover{
+                    text-decoration: underline;
+                }
+
+                &--copyright:hover{
+                    text-decoration: none;
+
+                }
+
+            }
+        }
+    }
+}

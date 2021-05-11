@@ -24,7 +24,7 @@
         list-style: none;
         padding: 0 1.1rem;
         .navbar__item {
-          padding: 0.8rem 0.6rem;
+          padding: 1rem 0.6rem;
           margin-bottom: 2px;
 
           &:hover:not(.navbar__button) {
@@ -41,8 +41,10 @@
           }
 
           &:hover .navbar__icon-comp {
-            color: #1b7bb8;
+            fill: #1b7bb8;
           }
+
+          
           &-link {
             color: #fff;
             display: flex;
@@ -64,6 +66,8 @@
               .navbar__icon-comp {
                 align-self: center;
                 transition: all 0.2s;
+                height: 27px;
+                color: #fff;
               }
             }
           }
@@ -82,9 +86,9 @@
 
         .navbar__button {
           margin-top: 2rem;
-          transition: all .4s;
+          transition: all 0.4s;
 
-          &:hover a{
+          &:hover a {
             background-color: rgb(25, 147, 218);
           }
         }

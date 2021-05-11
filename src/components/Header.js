@@ -1,56 +1,60 @@
 import "./Header.scss";
 import { FaTwitter } from "react-icons/fa";
-import { RiHome7Fill } from "react-icons/ri";
-import { RiFileList2Line } from "react-icons/ri";
-import { AiOutlineNumber } from "react-icons/ai";
-import { IoMdNotificationsOutline } from "react-icons/io";
+
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
-import { HiOutlineUser } from "react-icons/hi";
-import { BiEnvelope } from "react-icons/bi";
-import { CgMoreO } from "react-icons/cg";
-import { FiBookmark } from "react-icons/fi";
+
+import {
+  HomeIcon,
+  HashtagIcon,
+  NotificationIcon,
+  MessagesIcon,
+  MarksIcon,
+  ListIcon,
+  ProfileIcon,
+  MoreIcon,
+} from "../icons/HeaderIcons";
 
 const Banner = () => {
   const listItems = [
     {
-      icon: <RiHome7Fill className="navbar__icon-comp" size={30} />,
+      icon: <HomeIcon />,
       name: "Anasayfa",
       path: "/home",
     },
     {
-      icon: <AiOutlineNumber className="navbar__icon-comp" size={30} />,
+      icon: <HashtagIcon/>,
       name: "Keşfet",
       path: "/explore",
     },
     {
       icon: (
-        <IoMdNotificationsOutline className="navbar__icon-comp" size={30} />
+        <NotificationIcon />
       ),
       name: "Bildirimler",
       path: "/notifications",
     },
     {
-      icon: <BiEnvelope className="navbar__icon-comp" size={30} />,
+      icon: <MessagesIcon />,
       name: "Mesajlar",
       path: "/messages",
     },
     {
-      icon: <FiBookmark className="navbar__icon-comp" size={30} />,
+      icon: <MarksIcon />,
       name: "Yer İşaretleri",
       path: "/marks",
     },
     {
-      icon: <RiFileList2Line className="navbar__icon-comp" size={30} />,
+      icon: <ListIcon/>,
       name: "Listeler",
       path: "/lists",
     },
     {
-      icon: <HiOutlineUser className="navbar__icon-comp" size={30} />,
+      icon: <ProfileIcon/>,
       name: "Profil",
       path: "/profile",
     },
     {
-      icon: <CgMoreO className="navbar__icon-comp" size={30} />,
+      icon: <MoreIcon/>,
       name: "Daha Fazla",
       path: "/more",
     },
@@ -61,14 +65,14 @@ const Banner = () => {
       <div className="banner__wrapper">
         <div className="banner__navigation">
           <FaTwitter className="banner__logo" size={30} color="#fff" />
-          
+
           <ul className="navbar__items">
-            {listItems.map((item, key) => {
+            {listItems.map(({icon, name, path}, key) => {
               return (
                 <li className="navbar__item" key={key}>
-                  <a href={item.path} className="navbar__item-link">
-                    <div className="navbar__icon">{item.icon}</div>
-                    <div className="navbar__span">{item.name}</div>
+                  <a href={path} className="navbar__item-link">
+                    <div className="navbar__icon">{icon}</div>
+                    <div className="navbar__span">{name}</div>
                   </a>
                 </li>
               );
@@ -106,3 +110,6 @@ const Banner = () => {
 };
 
 export default Banner;
+
+
+

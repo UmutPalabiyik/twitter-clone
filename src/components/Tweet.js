@@ -1,11 +1,7 @@
 /* icons */
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
 import { BsDot } from "react-icons/bs";
-import { FaRegComment } from "react-icons/fa";
-import { AiOutlineRetweet } from "react-icons/ai";
-import { HiOutlineHeart } from "react-icons/hi";
-import { RiUpload2Line } from "react-icons/ri";
-
+import { CommentIcon, RetweetIcon, LikeIcon, ShareIcon } from "../icons/TweetBoxIcons"
 
 import "./Tweet.scss";
 
@@ -46,16 +42,16 @@ const Tweet = (props) => {
           <div className="tweet__icons">
             <ul className="tweet__icons-list">
               <li className="tweet__icons-list-item">
-                <FaRegComment className="tweet__icons-list-item-icon" color={"#88A3A6"}  size={19}/>
+                <CommentIcon />
               </li>
               <li className="tweet__icons-list-item">
-                <AiOutlineRetweet className="tweet__icons-list-item-icon" color={"#88A3A6"} size={20}/>
+                <RetweetIcon/>
               </li>
               <li className="tweet__icons-list-item">
-                <HiOutlineHeart className="tweet__icons-list-item-icon" color={"#88A3A6"} size={20}/>
+                <LikeIcon/>
               </li>
               <li className="tweet__icons-list-item">
-                <RiUpload2Line className="tweet__icons-list-item-icon" color={"#88A3A6"} size={19}/>
+                <ShareIcon/>
               </li>
             </ul>
           </div>
