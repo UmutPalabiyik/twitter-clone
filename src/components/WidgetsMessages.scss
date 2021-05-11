@@ -1,55 +1,109 @@
 .widgets-message {
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
-  padding: 10px 16px;
   background-color: rgba(21, 32, 43, 1);
+  cursor: pointer;
 
   position: fixed;
   right: 0;
   bottom: 0;
-  width: 368px;
+  width: 400px;
   margin-right: 20px;
-  &__wrapper {
-    display: flex;
-    justify-content: space-between;
-  }
 
-  &__text {
-    color: #fff;
-    font-size: 20px;
-    font-weight: 800;
-    align-self: center;
-    &:hover {
-      cursor: pointer;
+  &__wrapper {
+    .widgets-message__body--visible {
+      display: block;
     }
   }
 
-  &__icons {
+  &__header {
     display: flex;
+    padding: 8px 16px;
+    justify-content: space-between;
 
-    .widgets-message__icons-inner {
-      height: 38px;
-      width: 38px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
+    &-text {
+      color: #fff;
+      font-size: 20px;
+      font-weight: 800;
+      align-self: center;
       &:hover {
-        border-radius: 50%;
-        background-color: rgba(29, 161, 242, 0.1);
         cursor: pointer;
       }
     }
 
-    .widgets-message__message-icon {
-      height: 22.5px;
-      width: 22.5px;
-    }
-    .widgets-message__open-icon {
-      height: 22.5px;
-      width: 22.5px;
+    &-icons {
+      display: flex;
 
+      .widgets-message__message-icon-wrapper {
+        height: 38px;
+        width: 38px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
+        .widgets-message__message-icon {
+          height: 22.5px;
+          width: 22.5px;
+        }
+
+        &:hover {
+          border-radius: 50%;
+          background-color: rgba(29, 161, 242, 0.1);
+          cursor: pointer;
+        }
+      }
+      .widgets-message__open-icon-wrapper {
+        height: 38px;
+        width: 38px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .widgets-message__open-icon {
+          height: 22.5px;
+          width: 22.5px;
+        }
+
+        &:hover {
+          border-radius: 50%;
+          background-color: rgba(29, 161, 242, 0.1);
+          cursor: pointer;
+        }
+      }
     }
+  }
+
+  &__body {
+    border-top: 1px solid rgb(56, 68, 77);
+    display: none;
+
+    &-request {
+      &:hover {
+        background-color: rgb(25, 39, 52);
+      }
+    }
+
+    &-request-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &-request {
+      padding: 12px 16px;
+      &-text {
+        font-size: 15px;
+        color: #fff;
+      }
+
+      &-icon {
+        height: 18.75px;
+        width: 18.75px;
+      }
+    }
+  }
+
+  &__messages{
+    max-height: 440px;
+    overflow-y: scroll;
   }
 }

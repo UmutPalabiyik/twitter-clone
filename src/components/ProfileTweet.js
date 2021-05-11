@@ -8,11 +8,7 @@ import firebase from "firebase";
 import "./ProfileTweet.scss";
 
 /* icons */
-import { AiOutlinePicture } from "react-icons/ai";
-import { AiOutlineFileGif } from "react-icons/ai";
-import { AiOutlineSchedule } from "react-icons/ai";
-import { BsBarChart } from "react-icons/bs";
-import { FiSmile } from "react-icons/fi";
+
 import {
   MediaIcon,
   GifIcon,
