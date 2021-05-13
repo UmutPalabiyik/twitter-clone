@@ -1,7 +1,7 @@
 /* icons */
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
 import { BsDot } from "react-icons/bs";
-import { CommentIcon, RetweetIcon, LikeIcon, ShareIcon } from "../icons/TweetBoxIcons"
+import { CommentIcon, RetweetIcon, LikeIcon, ShareIcon } from "../../icons/TweetBoxIcons"
 
 import "./Tweet.scss";
 

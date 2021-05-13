@@ -1,13 +1,13 @@
 import "./App.scss";
-import Banner from "./components/Header";
-import Main from "./components/Main";
-import Widgets from "./components/Widgets";
+import Navbar from "./components/Navbar/Navbar.js";
+import Main from "./components/MainFlow/Main.js";
+import Widgets from "./components/Widgets/Widgets.js";
 
 
 function App() {
   return (
     <div className="App">
-      <Banner />
+      <Navbar />
       <Main />
       <Widgets />
     </div>

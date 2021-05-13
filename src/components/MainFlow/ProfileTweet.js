@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 /* Database */
-import db from "../firebase";
+import db from "../../firebase";
 import firebase from "firebase";
 
 import "./ProfileTweet.scss";
@@ -15,7 +15,7 @@ import {
   SurveyIcon,
   EmojiIcon,
   PlanIcon,
-} from "../icons/ProfileTweetIcons";
+} from "../../icons/ProfileTweetIcons";
 
 const ProfileTweet = () => {
   const [emptyInput, setEmptyInput] = useState(false);

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import db from "../firebase";
+import db from "../../firebase";
 import Tweet from "./Tweet.js";
 import ProfileTweet from "./ProfileTweet.js";
 import "./TweetFlow.scss";

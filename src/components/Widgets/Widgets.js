@@ -1,9 +1,9 @@
 import "./Widgets.scss";
-import WidgetsMessages from "./WidgetsMessages";
-import WidgetsNav from "./WidgetsNav";
-import WidgetsSearchBar from "./WidgetsSearchBar";
-import WidgetsSuggestions from "./WidgetsSuggestions";
-import WidgetsTrendings from "./WidgetsTrendings"
+import WidgetsMessages from "./MessagesWidget/WidgetsMessages";
+import WidgetsNav from "./NavbarWidget/WidgetsNav";
+import WidgetsSearchBar from "./SearchbarWidget/WidgetsSearchBar";
+import WidgetsSuggestions from "./SuggestionsWidget/WidgetsSuggestions";
+import WidgetsTrendings from "./TrendingsWidget/WidgetsTrendings"
 
 
 const Widgets = () => {

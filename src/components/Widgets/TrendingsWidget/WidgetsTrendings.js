@@ -19,7 +19,7 @@ const WidgetsTrendings = () => {
         situation: false,
       });
     } else {
-      setLimitTrendings({ limit: 10, text: "Daha az göster", situation: true });
+      setLimitTrendings({ limit: trendingTopics.length, text: "Daha az göster", situation: true });
     }
   };
 
@@ -73,7 +73,7 @@ const WidgetsTrendings = () => {
       location: "Türkiye",
       hashtag: "Bahamalar",
       tweetCount: 12.953,
-    },
+    }
   ];
 
   return (

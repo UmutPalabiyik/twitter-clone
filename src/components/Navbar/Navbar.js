@@ -1,4 +1,4 @@
-import "./Header.scss";
+import "./Navbar.scss";
 import { FaTwitter } from "react-icons/fa";
 
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
@@ -12,9 +12,9 @@ import {
   ListIcon,
   ProfileIcon,
   MoreIcon,
-} from "../icons/HeaderIcons";
+} from "../../icons/HeaderIcons";
 
-const Banner = () => {
+const Navbar = () => {
   const listItems = [
     {
       icon: <HomeIcon />,
@@ -117,7 +117,7 @@ const Banner = () => {
   );
 };
 
-export default Banner;
+export default Navbar;
 
 
 

@@ -1,6 +1,5 @@
 import "./Main.scss";
 import { WiStars } from "react-icons/wi";
-
 import TweetFlow from "./TweetFlow";
 
 const Main = () => {
